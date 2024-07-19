@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "4d1270a3-f870-4ef1-85b7-db126d14909f",
+		"name": "MongoDBSchoolNodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21929796"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/school/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/school/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"school",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/school/669a278181f37156a45d09fe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/school/669a278181f37156a45d09fe",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"school",
+						"669a278181f37156a45d09fe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/school/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Squidward Jr\",\n    \"age\": 11,\n    \"gpa\": 2.7,\n    \"fullTime\": true,\n    \"registerDate\": \"2024-07-19T08:44:49.711Z\",\n    \"graduationDate\": \"2024-07-19T08:44:49.711Z\",\n    \"courses\": [\n        \"Art\",\n        \"Music\",\n        \"History\"\n    ],\n    \"address\": {\n        \"street\": \"202 Tentacle Ln\",\n        \"city\": \"BB\",\n        \"postcode\": 12350\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/school/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"school",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/school/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Squidward Jr\",\n    \"age\": 11,\n    \"gpa\": 2.7,\n    \"fullTime\": true,\n    \"registerDate\": \"2024-07-19T08:44:49.711Z\",\n    \"graduationDate\": \"2024-07-19T08:44:49.711Z\",\n    \"courses\": [\n        \"Art\",\n        \"Music\",\n        \"History\"\n    ],\n    \"address\": {\n        \"street\": \"202 Tentacle Ln\",\n        \"city\": \"BB\",\n        \"postcode\": 12350\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/school/669a9703513f3d1c35fad027",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"school",
+						"669a9703513f3d1c35fad027"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/school/",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"age\": 3,\n    \"gpa\": 1.0,\n    \"fullTime\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/school/669a9b1c38bad3c93ec485ad",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"school",
+						"669a9b1c38bad3c93ec485ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/school/669a278181f37156a45d09fe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Squidward Jr the 2nd\",\n    \"age\": 4,\n    \"gpa\": 1.5,\n    \"fullTime\": false,\n    \"registerDate\": \"2024-07-19T08:44:49.711Z\",\n    \"graduationDate\": \"2024-07-19T08:44:49.711Z\",\n    \"courses\": [\n        \"Art\",\n        \"Music\",\n        \"History\"\n    ],\n    \"address\": {\n        \"street\": \"202 Tentacle Ln\",\n        \"city\": \"BB\",\n        \"postcode\": 12350\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/school/669a9b1c38bad3c93ec485ad",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"school",
+						"669a9b1c38bad3c93ec485ad"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

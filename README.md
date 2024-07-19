@@ -132,3 +132,18 @@ npm install
 ```bash
 node init-db.js
 ```
+## Postman Collection
+
+To make it easier to test and interact with the API, a Postman collection has been included in this project.
+
+**Collection File:**
+- `postman/MongoDBSchoolNodeJS.postman_collection.json`
+
+**How to Import the Collection:**
+
+1. Open Postman.
+2. Click on the **"Import"** button in the top left corner.
+3. Drag and drop the `your-collection-file.json` file into the import window or use the **"Upload Files"** option to select the file.
+4. Click **"Import"** to add the collection to Postman.
+
+You can now use this collection to test the API endpoints included in this project.
