@@ -55,14 +55,83 @@ The application provides several RESTful API endpoints to manage student records
   - `id`: The MongoDB ObjectId of the student.
 - **Response**: JSON object of the student.
 
-### Add a New Student
+### Add a New One Student or Many Students
 
 - **Endpoint**: `/school`
 - **Method**: `POST`
-- **Description**: Adds a new student to the database.
-- **Request Body**: JSON object with student details.
-- **Response**: JSON object with a success message and the ID of the newly added student.
+- **Description**: Add one or multiple new students.
+- **Request Body**: JSON object or array of objects with student details
+- Request Body for Single Student:
+   ```json
+ 
+  {
+  "name": "Student A",
+  "age": 20,
+  "gpa": 3.5,
+  "fullTime": true,
+  "registerDate": "2024-07-19T08:44:49.711Z",
+  "graduationDate": "2024-07-19T08:44:49.711Z",
+  "courses": ["Math", "Science"],
+  "address": {
+  "street": "123 Main St",
+  "city": "CityA",
+  "postcode": 12345
+  }
+  }
+    ```
+- - **Response**: Response for Single Student:
+ ```json
+    {
+    "message": "Student added successfully",
+    "studentId": "60d0fe4f5311236168a109ca"
+    }
+   ```
+- JSON object with a success message and the ID of the newly added student.
+- Request Body for Multiple Students:
+   ```json
+  [
+  {
+  "name": "Student A",
+  "age": 20,
+  "gpa": 3.5,
+  "fullTime": true,
+  "registerDate": "2024-07-19T08:44:49.711Z",
+  "graduationDate": "2024-07-19T08:44:49.711Z",
+  "courses": ["Math", "Science"],
+  "address": {
+  "street": "123 Main St",
+  "city": "CityA",
+  "postcode": 12345
+  }
+  },
+  {
+  "name": "Student B",
+  "age": 22,
+  "gpa": 3.8,
+  "fullTime": false,
+  "registerDate": "2024-07-19T08:44:49.711Z",
+  "graduationDate": "2024-07-19T08:44:49.711Z",
+  "courses": ["English", "History"],
+  "address": {
+  "street": "456 Elm St",
+  "city": "CityB",
+  "postcode": 67890
+  }
+  }
+  ]
+ ```
+ ```
+- **Response**: Response for Multiple Students:
+ ```json
 
+{
+"message": "Students added successfully",
+"studentIds": {
+"0": "60d0fe4f5311236168a109cb",
+"1": "60d0fe4f5311236168a109cc"
+}
+}
+ ```
 ### Delete a Student by ID
 
 - **Endpoint**: `/school/:id`

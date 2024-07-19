@@ -51,18 +51,40 @@ app.get('/school/:id', async (req, res) => {
     }
 });
 
-// POST a new student
+// // POST a new student
+// app.post('/school', async (req, res) => {
+//     const student = req.body;
+//
+//     try {
+//         const result = await db.collection('students').insertOne(student);
+//         res.status(201).json({message: "Student added successfully", studentId: result.insertedId});
+//     } catch (error) {
+//         console.error(error);
+//         res.status(500).json({error: "An error occurred while adding the student"});
+//     }
+// });
+
+// POST a new student or multiple students
 app.post('/school', async (req, res) => {
-    const student = req.body;
+    const data = req.body;
 
     try {
-        const result = await db.collection('students').insertOne(student);
-        res.status(201).json({message: "Student added successfully", studentId: result.insertedId});
+        if (Array.isArray(data)) {
+            // Insert multiple students
+            const result = await db.collection('students').insertMany(data);
+            res.status(201).json({ message: "Students added successfully", studentIds: result.insertedIds });
+        } else {
+            // Insert a single student
+            const result = await db.collection('students').insertOne(data);
+            res.status(201).json({ message: "Student added successfully", studentId: result.insertedId });
+        }
     } catch (error) {
         console.error(error);
-        res.status(500).json({error: "An error occurred while adding the student"});
+        res.status(500).json({ error: "An error occurred while adding the student(s)" });
     }
 });
+
+
 
 // DELETE a student by ID
 app.delete('/school/:id', async (req, res) => {
